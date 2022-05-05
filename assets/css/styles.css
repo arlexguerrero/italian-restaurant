@@ -8,6 +8,7 @@ Variables
 	--white: #fff;
 	/*-----Backgrounds colors---*/
 	--yellow-mustard: #FFB03A;
+	--yellow-smooth: #FFFCEB;
 	/*-----Fonts families---*/
 	--times-title: 'Nanum Myeongjo', serif;
 	--paragraph: 'Roboto', sans-serif;
@@ -16,7 +17,9 @@ Variables
 
 
 
-/* HEADER */
+/*======
+HEADER
+====*/
 
 .header {
 	background-image: url("../../assets/img/header.jpg");
@@ -134,7 +137,7 @@ Variables
 .header__paragraph {
 	color: #fff;
 	text-align: center;
-	font-size: 1em;
+	font-size: 20px;
 	font-family: var(--paragraph);
 	line-height: 147%;
 }
@@ -161,9 +164,17 @@ Variables
 	width: 4%;
 }
 
-/* HEADER */
 
-/* INTRUDUCTORY PARAGRAPH */
+/*======
+HEADER
+====*/
+
+
+/*======
+INTRUDUCTORY PARAGRAPH
+====*/
+
+
 
 #seemore {
 	margin: 64px auto;
@@ -171,12 +182,15 @@ Variables
 
 .intro__paragraph {
 	text-align: center;
-	font-size: 24px;
+	font-size: 20px;
 	font-family: var(--paragraph);
 
 }
 
-/* INTRUDUCTORY PARAGRAPH */
+/*======
+INTRUDUCTORY PARAGRAPH
+====*/
+
 
 /*======
 OUR SERVICES
@@ -184,13 +198,12 @@ OUR SERVICES
 
 .services {
 	background-color: #FFFCEB;
-	position: relative;
-	padding-bottom: 5%;
+	display: flex;
 }
 
 @media (min-width: 300px) {
 	.services {
-		background-color: #FFFCEB;
+		background-color: var(--yellow-smooth);
 		position: relative;
 		padding-bottom: 5%;
 	}

@@ -1,7 +1,13 @@
 /*======
 Variables
 ====*/
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Roboto&display=swap');
+
+
+html {
+	scroll-behavior: smooth;
+}
 
 :root {
 	/*-----fonts colors---*/
@@ -12,6 +18,15 @@ Variables
 	/*-----Fonts families---*/
 	--times-title: 'Nanum Myeongjo', serif;
 	--paragraph: 'Roboto', sans-serif;
+	--times-title-bold: 700;
+	--times-title-extrabold: 800;
+
+	/*-----Fonts size---*/
+	--super-title: 40px;
+	--title: 30px;
+	--large-screen: 20px;
+	--medium-screen: 14px;
+	--small-screen: 12px;
 }
 
 
@@ -90,13 +105,13 @@ HEADER
 	text-align: center;
 	color: var(--white);
 	font-family: var(--times-title);
-	font-size: 2em;
+	font-size: var(--super-title);
+	font-weight: var(--times-title-extrabold);
 }
 
 @media (min-width: 576px) {
 	.header__title {
 		text-align: center;
-		font-size: 2em;
 		margin-top: 10%;
 	}
 }
@@ -104,7 +119,6 @@ HEADER
 @media (min-width: 768px) {
 	.header__title {
 		text-align: center;
-		font-size: 3em;
 		margin-top: 22%;
 	}
 }
@@ -112,7 +126,6 @@ HEADER
 @media (min-width: 992px) {
 	.header__title {
 		text-align: center;
-		font-size: 5em;
 		margin-top: 26%;
 	}
 }
@@ -120,27 +133,29 @@ HEADER
 @media (min-width: 1200px) {
 	.header__title {
 		text-align: center;
-		font-size: 5em;
-	}
-}
 
-@media (min-width: 768px) {
-	.header__paragraph {
-		color: #fff;
-		text-align: center;
-		font-size: 1em;
-		font-family: var(--paragraph);
-		line-height: 136%;
 	}
 }
 
 .header__paragraph {
 	color: #fff;
 	text-align: center;
-	font-size: 20px;
+	font-size: var(--large-screen);
 	font-family: var(--paragraph);
 	line-height: 147%;
 }
+
+@media screen and (max-width: 768px) {
+
+	.header__paragraph {
+		font-size: var(--medium-screen);
+		font-family: var(--paragraph);
+		line-height: 136%;
+	}
+}
+
+
+
 
 .btn.btn-warning.header__button {
 	color: #fff;
@@ -182,9 +197,27 @@ INTRUDUCTORY PARAGRAPH
 
 .intro__paragraph {
 	text-align: center;
-	font-size: 20px;
+	font-size: var(--large-screen);
 	font-family: var(--paragraph);
 
+}
+
+@media screen and (max-width: 768px) {
+	.intro__paragraph {
+
+		font-size: var(--medium-screen);
+
+
+	}
+}
+
+@media screen and (max-width: 370px) {
+	.intro__paragraph {
+
+		font-size: var(--small-screen);
+
+
+	}
 }
 
 /*======
@@ -244,16 +277,16 @@ OUR SERVICES
 
 .services__cards {
 	border: none;
-	box-shadow: 0px 4px 10px -1px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.75);
 }
 
 .services__title {
-	font-family: serif;
+	font-family: var(--times-title);
 	color: #8E2800;
 	margin-top: 2%;
 	margin-bottom: 2%;
-	font-size: 3em;
-	font-weight: bolder;
+	font-size: var(--title);
+	font-weight: var(--times-title-extrabold);
 }
 
 .card-body {
@@ -275,6 +308,28 @@ OUR SERVICES
 	font-family: 'Roboto';
 	font-size: 1em;
 	line-height: 138%;
+}
+
+@media screen and (max-width: 768px) {
+	.services__info-paragraph {
+		font-size: var(--medium-screen);
+
+	}
+
+	.services__info-title {
+		font-size: 18px;
+		font-weight: bold;
+
+	}
+}
+
+@media screen and (max-width: 598px) {
+	.horizontal__scroll {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-x: scroll;
+	}
+
 }
 
 /* OUR HISTORY */
@@ -302,41 +357,26 @@ OUR SERVICES
 
 @media (min-width: 768px) {
 	.our-history__title {
-		font-family: serif;
-		color: #8E2800;
 		margin-top: 14%;
 		margin-bottom: 2%;
 		font-size: 2em;
-		font-weight: bolder;
-		text-align: center;
-		display: block;
-		width: 100%;
 	}
 }
 
 @media (min-width: 992px) {
 	.our-history__title {
-		font-family: serif;
-		color: #8E2800;
+
 		margin-top: 18%;
 		margin-bottom: 2%;
 		font-size: 2em;
-		font-weight: bolder;
-		text-align: center;
-		display: block;
-		width: 100%;
+
 	}
 }
 
 @media (min-width: 1201px) {
 	.our-history__title {
-		font-family: serif;
-		color: #8E2800;
 		margin-top: 27%;
 		font-size: 2em;
-		font-weight: bolder;
-		text-align: center;
-		display: block;
 		width: 100%;
 	}
 }
